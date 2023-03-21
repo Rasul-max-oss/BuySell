@@ -17,7 +17,7 @@ public class ProductService {
     //Если есть title то ищем
     // Если  в заголовке ничего нет,  возвращаем  список .
     public  List<Product>listProducts(String title){
-        if(title!=null) productRepository.findByTitle(title);
+        if(title!=null) return productRepository.findByTitle(title);
         return productRepository.findAll();
     }
 
@@ -32,6 +32,6 @@ public class ProductService {
     }
 
     public Product getProductById(Long id) {//Возвращаем товар, если товар не найден возвращаем нул
-        return productRepository.findById(id).orElse(null)
+        return productRepository.findById(id).orElse(null);
     }
 }
