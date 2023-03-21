@@ -28,8 +28,6 @@ public class Image {
     private boolean isPreviewImage;//для превью
     @Lob
     private byte[] bytes;
-    @ManyToOne(cascade = CascadeType.REFRESH,fetch = FetchType.EAGER)//много фотографий  к одному товару.Refresh обновить,feth способ загрзуки
+    @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
     private Product product;
-
-
 }
